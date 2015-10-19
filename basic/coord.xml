@@ -13,19 +13,19 @@
   </controls>
 
   <datasets>
-    <include>datasets.xml</include>
+    <include>hdfs://quickstart.cloudera:8020/user/cloudera/oozie/datasets.xml</include>
       <dataset
-      	name="in"
-      	frequency="1"
-      	initial-instance="2015-10-19T00:00Z"
-      	timezone="UTC">
+	name="in"
+	frequency="1"
+	initial-instance="2015-10-19T00:00Z"
+	timezone="UTC">
       <uri-template>hdfs://quickstart.cloudera:8020/user/cloudera/oozie/basic/in/${YEAR}/${MONTH}/${DAY}/${HOUR}/${MINUTE}</uri-template>
     </dataset>
     <dataset
-      	name="out"
-      	frequency="1"
-      	initial-instance="2015-10-19T00:00Z"
-      	timezone="UTC">
+	name="out"
+	frequency="1"
+	initial-instance="2015-10-19T00:00Z"
+	timezone="UTC">
       <uri-template>hdfs://quickstart.cloudera:8020/user/cloudera/oozie/basic/out/${YEAR}/${MONTH}/${DAY}/${HOUR}/${MINUTE}</uri-template>
     </dataset>
   </datasets>
@@ -34,7 +34,7 @@
     <data-in name="input_present" dataset="in">
       <instance>${coord:current(0)}</instance>
     </data-in>
-    
+
     <data-in name="input_past" dataset="in">
       <start-instance>${coord:current(-4)}</start-instance>
       <end-instance>${coord:current(-1)}</end-instance>
