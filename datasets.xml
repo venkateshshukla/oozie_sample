@@ -1,0 +1,4 @@
+<dataset name="sample">
+  <url-template>hdfs://quickstart.cloudera:8020/user/cloudera/oozie/sample/${YEAR}/${MONTH}/${DAY}/${HOUR}/${MINUTE}</url-template>
+  <done-flag>_SUCCESS</done-flag>
+</dataset>
