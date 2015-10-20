@@ -5,7 +5,8 @@
     <shell xmlns="uri:oozie:shell-action:0.1">
       <job-tracker>localhost:8032</job-tracker>
       <name-node>hdfs://quickstart.cloudera:8020</name-node>
-      <exec>hdfs://quickstart.cloudera:8020/user/cloudera/oozie/basic/touch.sh</exec>
+      <exec>touch.sh</exec>
+      <file>hdfs://quickstart.cloudera:8020/user/cloudera/oozie/basic/touch.sh</file>
     </shell>
     <ok to="end"/>
     <error to="fail"/>
