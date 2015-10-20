@@ -1,14 +1,15 @@
 <workflow-app xmlns="uri:oozie:workflow:0.2" name="basic-wf">
   <start to="shellAction"/>
-    <action name="shellAction">
-      <shell xmlns="uri:oozie:shell-action:0.1">
-        <job-tracker>localhost:8021</job-tracker>
-        <name-node>hdfs://quickstart.cloudera:8020</name-node>
-        <exec>hdfs://quickstart.cloudera:8020/user/cloudera/oozie/basic/touch.sh</exec>
-      </shell>
-      <ok to="end"/>
-      <error to="fail"/>
-    </action>
+  
+  <action name="shellAction">
+    <shell xmlns="uri:oozie:shell-action:0.1">
+      <job-tracker>localhost:8032</job-tracker>
+      <name-node>hdfs://quickstart.cloudera:8020</name-node>
+      <exec>hdfs://quickstart.cloudera:8020/user/cloudera/oozie/basic/touch.sh</exec>
+    </shell>
+    <ok to="end"/>
+    <error to="fail"/>
+  </action>
 
   <kill name="fail">
     <message>Workflow failed, error message[${wf:errorMessage(wf:lastErrorNode())}]</message>
