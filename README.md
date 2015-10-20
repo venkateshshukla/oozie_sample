@@ -12,4 +12,4 @@ Then start a coordinator job using
 
 > oozie job -config coordinator.properties -run
 
-View the jobs using web client at `http://quickstart.cloudera:11000/oozie`
+View the jobs using web client at `http://quickstart.cloudera:8888/oozie/list_oozie_workflow`
